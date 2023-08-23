@@ -38,5 +38,7 @@ def create(request):
     
     return redirect('posts:detail', id=post.id)
 
+
+
     
 
