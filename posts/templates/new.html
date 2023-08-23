@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{% url 'posts:create' %}" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="title-id" class="form-label">제목</label>
+      <input type="text" class="form-control" id="title-id" name="title">
+    </div>
+    
+    <!-- 현재 요소의 특징을 선택해주기위한 선택자 id -->
+    <!-- 함수에 들어갈 변수 name -->
+
+    <div class="mb-3">
+      <label for="content" class="form-label">내용</label>
+      <!-- <input type="password" class="form-control" id="exampleInputPassword1"> -->
+      <textarea class="form-control" id="content" cols="30" rows="10" name="content"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{%endblock%}

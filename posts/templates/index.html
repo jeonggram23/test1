@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>index</h1>
-<table>
+<table class="table">
     <thead>
         <th>제목</th>
         <th>상세보기</th>
@@ -10,11 +10,12 @@
     <tbody>
         {% for post in posts %}
         <tr>
-            <td>
-                {{post.title}}
-
-            </td>
+            
+            <td class="table-secondary">{{post.title}}</td>
+                
             <td> <a href=" {% url 'posts:detail' id=post.id %}">detail</a></td>
+            
+            
         </tr>
         {% endfor %}
     </tbody>
